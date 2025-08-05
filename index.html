@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- INTRO OVERLAY -->
+<div id="introOverlay">
+  <h2 style="color:#ff4081;font-size:2em;">🎂 Happy Birthday Roshni 🎂</h2>
+  <div class="cake-container" id="cakeArea">
+    <div class="half left-half" id="leftHalf"></div>
+    <div class="half right-half" id="rightHalf"></div>
+    <div class="candle" onclick="blowCandle()">
+      <div class="flame" id="flame"></div>
+      <div class="smoke" id="smoke"></div>
+    </div>
+    <img src="images/knife.png" class="knife" id="knife">
+  </div>
+  <p style="color:#ff4081;margin-top:15px;" id="instruction">Click the candle to blow it out!</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="mainContent">
+<h1>🎉 Happy Birthday Darling 🎉</h1>
+<div class="typewriter" id="typewriter"></div>
+<div class="floating-gallery">
+  <img src="images/pic1.jpg" alt="Memory 1" onclick="openLightbox(this.src)">
+  <img src="images/pic2.jpg" alt="Memory 2" onclick="openLightbox(this.src)">
+  <img src="images/pic3.jpg" alt="Memory 3" onclick="openLightbox(this.src)">
+  <img src="images/pic4.jpg" alt="Memory 4" onclick="openLightbox(this.src)">
+  <img src="images/pic5.jpg" alt="Memory 5" onclick="openLightbox(this.src)">
+  <img src="images/pic6.jpg" alt="Memory 6" onclick="openLightbox(this.src)">
+  <img src="images/pic7.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+  <img src="images/pic8.jpg" alt="Memory 8" onclick="openLightbox(this.src)">
+  <img src="images/pic9.jpg" alt="Memory 9" onclick="openLightbox(this.src)">
+  <img src="images/pic10.jpg" alt="Memory 10" onclick="openLightbox(this.src)">
+  <img src="images/pic11.jpg" alt="Memory 11" onclick="openLightbox(this.src)">
+  <img src="images/pic12.jpg" alt="Memory 12" onclick="openLightbox(this.src)">
+  <img src="images/pic13.jpg" alt="Memory 13" onclick="openLightbox(this.src)">
+  <img src="images/pic14.jpg" alt="Memory 14" onclick="openLightbox(this.src)">
+  <img src="images/pic15.jpg" alt="Memory 15" onclick="openLightbox(this.src)">
+  <img src="images/pic16.jpg" alt="Memory 16" onclick="openLightbox(this.src)">
+  <img src="images/pic17.jpg" alt="Memory 17" onclick="openLightbox(this.src)">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full View">
+</div>
+
+<div class="mic-container">
+    <div id="micIcon" class="mic-icon">🎤</div>
+    <div class="mic-hint">Say "I Love You" for a Surprise!</div>
+<!-- Surprise Image -->
+<div id="surpriseContainer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; justify-content:center; align-items:center;">
+    <img src="images/surprise.jpg" alt="Surprise" style="max-width:100%; max-height:100%; border-radius:10px;">
+</div>
+
+<audio id="surpriseAudio" src="audio/surprise.mp3"></audio>
+</div>
+
+
+
+<div class="music-controls">
+    <button onclick="toggleMusic()">🎵 Play/Pause</button>
+    <button onclick="nextTrack()">⏭ Next</button>
+</div>
+
+<button onclick="showPopup()">Click for Surprise 🎁</button>
+<div id="popup">
+    <div class="box">
+        <p>❤️Happy Birthday, Babu! Tum meri zindagi ki sabse badi khushi ho.
+Bas yahi dua hai…❤️<br> ❤️tum hamesha muskurati raho, aur humesha meri raho.❤️<br></p>
+        <p id="counter"></p>
+        <div id="scratchArea" class="scratch-box">Scratch Here!</div>
+        <button class="close" onclick="closePopup()">Close</button>
+    </div>
+</div>
+<footer>With love, Anil ❤️</footer>
+<audio id="clap-sound" src="audio/clap.mp3"></audio>
+<audio id="happy-bday" src="audio/happy.mp3"></audio>
+<audio id="bg-music" src="audio/tumhiho.mp3" loop></audio>
+<canvas id="fireworks"></canvas>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

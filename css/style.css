@@ -184,7 +184,8 @@ canvas {
     width: 100%;
     cursor: pointer;
     z-index: 10;
-    transition: transform 10.5s ease-in-out;
+    transition: transform 1.5s ease-in-out;
+	display:none;
 }
 
 .knife.move {
@@ -257,16 +258,14 @@ canvas {
 }
 
 .floating-gallery img {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ff4081;
-  opacity: 0.85;
-  transition: all 3s ease-in-out;
-  cursor: pointer;
-  pointer-events: auto;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff4081;
+    pointer-events: auto; /* clickable */
+    z-index: 10;
 }
 
 /* Lightbox */

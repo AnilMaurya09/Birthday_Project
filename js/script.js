@@ -21,7 +21,6 @@ let isDragging = false, cutDone = false;
 
 // Move knife into position on first click
 knife.addEventListener('click', () => {
-	debugger
   knife.classList.add('move');
   setTimeout(() => {
     knife.style.right = 'unset';
@@ -68,8 +67,8 @@ function cutCake() {
   knife.style.display = 'none';
 
   setTimeout(() => {
-    document.getElementById('leftHalf').style.transform = 'translateX(-150px)';
-    document.getElementById('rightHalf').style.transform = 'translateX(150px)';
+    document.getElementById('leftHalf').style.transform = 'translateX(-100px)';
+    document.getElementById('rightHalf').style.transform = 'translateX(100px)';
     for (let i = 0; i < 80; i++) createConfetti();
   }, 1000);
 
@@ -215,7 +214,7 @@ if ('webkitSpeechRecognition' in window) {
 
   rec.onresult = function (e) {
     const transcript = e.results[e.results.length - 1][0].transcript.trim().toLowerCase();
-    if (transcript.includes('hello')) {
+    if (transcript.includes('i love you') || transcript.includes('i love u')) {
       rec.stop();
       showSurprise();
     }

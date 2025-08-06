@@ -18,7 +18,67 @@ h1 {
   0% { text-shadow: 0 0 10px #ff4081; }
   100% { text-shadow: 0 0 20px #ffd700; }
 }
+#userFormOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  font-family: 'Poppins', sans-serif;
+}
 
+#userFormOverlay .form-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+}
+
+#userFormOverlay h2 {
+  color: #ff4081;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+}
+
+#userFormOverlay input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ff4081;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#userFormOverlay input:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 8px #ff4081;
+}
+
+#userFormOverlay button {
+  width: 100%;
+  padding: 12px;
+  background: #ff4081;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#userFormOverlay button:hover {
+  background: #e91e63;
+}
 .typewriter {
   font-size: 1.4em;
   margin: 15px 0;

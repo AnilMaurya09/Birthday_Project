@@ -1,3 +1,22 @@
+function confirmPass() {
+    const pass = document.getElementById('pass').value.trim();
+    const errorMsg = document.getElementById('errorMsg');
+
+    errorMsg.textContent = ""; // Reset previous message
+
+    if (!pass) {
+        errorMsg.textContent = "Please enter a password!";
+        errorMsg.style.color = "red";
+        return;
+    }
+
+    if (pass.toLowerCase() === "roshanil") {
+        document.getElementById('userFormOverlay').style.display = 'none';
+    } else {
+        errorMsg.textContent = "Incorrect Password!";
+        errorMsg.style.color = "red";
+    }
+}
 function blowCandle() {
   document.getElementById('flame').classList.add('hidden');
   const smoke = document.getElementById('smoke');
